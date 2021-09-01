@@ -26,7 +26,7 @@ namespace Day2
                     passwordCounts++;
                 }
 
-                return $"Passords: {passwordCounts} Valid passwords: {validPasswordCount}";
+                return $"Passwords: {passwordCounts} Valid passwords: {validPasswordCount}";
             }
             catch(Exception ex)
             {
