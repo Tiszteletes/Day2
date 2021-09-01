@@ -40,10 +40,15 @@ namespace Day2
             ReqChar = split.ElementAtOrDefault(2)[0];
         }
 
-        public bool Check()
+        public bool CheckOldPolicy()
         {
             var reqCharCount = Password.Count(c => c == ReqChar);
             return Min <= reqCharCount && Max >= reqCharCount;
+        }
+
+        public bool CheckNewPolicy()
+        {
+            return Password.ElementAtOrDefault(Min - 1) == ReqChar ^ Password.ElementAtOrDefault(Max - 1) == ReqChar;
         }
     }
 }

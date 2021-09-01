@@ -14,19 +14,28 @@ namespace Day2
         {
             try
             {
-                int validPasswordCount = 0;
+                int validOldPasswordCount = 0;
+                int validNewPasswordCount = 0;
                 int passwordCounts = 0;
 
                 foreach (var row in File.ReadLines("source.txt"))
                 {
-                    if (new PolicyChecker(row).Check())
+                    if (new PolicyChecker(row).CheckOldPolicy())
                     {
-                        validPasswordCount++;
+                        validOldPasswordCount++;
                     }
+
+                    if (new PolicyChecker(row).CheckNewPolicy())
+                    {
+                        validNewPasswordCount++;
+                    }
+
                     passwordCounts++;
                 }
 
-                return $"Passwords: {passwordCounts} Valid passwords: {validPasswordCount}";
+                return @$"Passwords: {passwordCounts}
+Valid old policy passwords: {validOldPasswordCount}
+Valid new policy passwords: {validNewPasswordCount}";
             }
             catch(Exception ex)
             {
