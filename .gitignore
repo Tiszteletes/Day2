@@ -3,3 +3,10 @@
 ################################################################################
 
 /.vs
+/Day2/bin/Debug/netcoreapp3.1
+/Day2/obj/Debug/netcoreapp3.1
+/Day2/obj
+/Day2_Tests/bin/Debug/netcoreapp3.1
+/Day2_Tests/obj/Debug/netcoreapp3.1
+/Day2_Tests/obj/Release/netcoreapp3.1
+/Day2_Tests/obj

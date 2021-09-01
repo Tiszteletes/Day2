@@ -15,7 +15,7 @@ namespace Day2
             try
             {
                 int validPasswordCount = 0;
-                int passowrdCounts = 0;
+                int passwordCounts = 0;
 
                 foreach (var row in File.ReadLines("source.txt"))
                 {
@@ -23,10 +23,10 @@ namespace Day2
                     {
                         validPasswordCount++;
                     }
-                    passowrdCounts++;
+                    passwordCounts++;
                 }
 
-                return $"Passords: {passowrdCounts} Valid passwords: {validPasswordCount}";
+                return $"Passords: {passwordCounts} Valid passwords: {validPasswordCount}";
             }
             catch(Exception ex)
             {
